@@ -1,0 +1,58 @@
+<br>
+        <br>
+<div mat-dialog-content>
+    <form [formGroup]="userForm" class="createUser">
+        <h1>Registro de nuevo Alumno </h1>
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre</mat-label>
+                    <input formControlName="name" matInput placeholder="Nombre">
+                    <mat-icon matSuffix>text_fields</mat-icon>
+                    <mat-error>Campo requerido</mat-error>
+                    
+                  </mat-form-field>
+                  <br>
+                <mat-form-field appearance="outline">
+                    <mat-label>Apellido</mat-label>
+                    <input formControlName="lastName" matInput placeholder="Apellido">
+                    <mat-icon matSuffix>text_fields</mat-icon>
+                    <mat-error>Campo requerido</mat-error>
+                  </mat-form-field>
+                  <br>
+           
+                <mat-form-field appearance="outline">
+                    <mat-label>Pais</mat-label>
+                    <input formControlName="country" matInput placeholder="Pais">
+                    <mat-icon matSuffix>text_fields</mat-icon>
+                    <mat-error>Campo requerido</mat-error>
+                  </mat-form-field>
+           
+                <mat-form-field appearance="outline">
+                    <mat-label>Correo</mat-label>
+                    <input formControlName="email" matInput placeholder="Correo">
+                    <mat-icon matSuffix>email</mat-icon>
+                    <mat-error>Campo requerido</mat-error>
+                  </mat-form-field>
+    
+                  <mat-form-field appearance="outline">
+                    <mat-label>Telefono</mat-label>
+                    <input formControlName="phone" matInput placeholder="Telefono">
+                    <mat-icon matSuffix>phone</mat-icon>               
+                    <mat-error>Campo requerido</mat-error>
+                  </mat-form-field>
+                    
+            
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+      
+    <button mat-flat-button  color="primary" mat-dialog-close="" mat-button>Cancelar</button>
+    <button mat-flat-button color="primary" (click)="onSubmit()" mat-button>Guardar</button>
+<br>
+<br>
+</div>
