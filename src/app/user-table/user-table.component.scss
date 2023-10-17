@@ -1,8 +1,21 @@
-table {
-    width: 80%;
-    padding:20px
+body {
+  margin: 0 auto;
   }
   
+  table {
+    table-layout: fixed;
+    width: 650px;
+  }
  
+  th { color:white; 
+    background-color: #4e3f69;
+    width: 100px;
+    word-wrap: break-word;}
+
+ td{
+   font-size: 15px;
+ }
+ 
+
     
  

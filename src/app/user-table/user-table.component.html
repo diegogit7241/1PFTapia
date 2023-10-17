@@ -1,43 +1,43 @@
 
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" style="padding: 50%;">
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8" >
      
     <ng-container matColumnDef="id">
-       <th mat-header-cell *matHeaderCellDef><span appThFonts> Id </span></th>
-        <td mat-cell *matCellDef="let alumno"> {{alumno.id}} </td>
+       <th mat-header-cell *matHeaderCellDef style="background-color: #705c94;"><span appThFonts> Id </span></th>
+        <td mat-cell *matCellDef="let alumno" col="5"> {{alumno.id}} </td>
       </ng-container>
 
     <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef><span appThFonts> Nombre </span></th>
+      <th mat-header-cell *matHeaderCellDef style="background-color: #705c94;"><span appThFonts> Nombre </span></th>
       <td mat-cell *matCellDef="let alumno"> {{alumno.name}} </td>
     </ng-container>
       
     <ng-container matColumnDef="lastName">
-      <th mat-header-cell *matHeaderCellDef><span appThFonts> Apellido </span></th>
+      <th mat-header-cell *matHeaderCellDef style="background-color: #705c94;"><span appThFonts> Apellido </span></th>
       <td mat-cell *matCellDef="let alumno"> {{alumno.lastName}} </td>
     </ng-container>
 
     <ng-container matColumnDef="email">
-        <th mat-header-cell *matHeaderCellDef> <span appThFonts>Email </span></th>
+        <th mat-header-cell *matHeaderCellDef style="background-color: #705c94;"> <span appThFonts>Email </span></th>
         <td mat-cell *matCellDef="let alumno"> {{alumno.email}}</td>
       </ng-container>
 
       <ng-container matColumnDef="country">
-        <th mat-header-cell *matHeaderCellDef><span appThFonts>Pais </span></th>
+        <th mat-header-cell *matHeaderCellDef style="background-color: #705c94;"><span appThFonts>Pais </span></th>
         <td mat-cell *matCellDef="let alumno"> {{alumno.country}}</td>
       </ng-container>
 
       <ng-container matColumnDef="phone">
-        <th mat-header-cell *matHeaderCellDef><span appThFonts> Telefono </span></th>
+        <th mat-header-cell *matHeaderCellDef style="background-color: #705c94;"><span appThFonts> Telefono </span></th>
         <td mat-cell *matCellDef="let alumno"> {{alumno.phone}}</td>
       </ng-container>
 
       <ng-container matColumnDef="actions">
-        <th mat-header-cell *matHeaderCellDef><span appThFonts> Accion </span></th>        
+        <th mat-header-cell *matHeaderCellDef style="background-color: #705c94;"> <span appThFonts> Acciones </span></th>        
         <td mat-cell *matCellDef="let alumno"> 
-            <button (click)="editUser.emit(alumno)" matcon-button color="primary">
+            <button mat-button (click)="editUser.emit(alumno)" matcon-button color="primary">
                 <mat-icon>edit</mat-icon>
             </button>       
-            <button (click)="deleteUser.emit(alumno.id)" matcon-button color="warn">
+            <button mat-button (click)="deleteUser.emit(alumno.id)" matcon-button color="primary">
                 <mat-icon>delete</mat-icon>
             </button>       
         </td>

@@ -31,7 +31,6 @@ import { ThFontsDirective } from '../th-fonts.directive';
     MatButtonModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule,
     MatToolbarModule,
     MatFormFieldModule,
     MatInputModule,
