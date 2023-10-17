@@ -60,6 +60,7 @@ this.matDialog.open(UserDialogComponent,{data: alumno,}).afterClosed().subscribe
   }
 
   onDeleteUser(userId: number):void{
+    if(confirm("Esta seguro que desea eliminar este registro?"))
     this.alumnos = this.alumnos.filter((u) =>u.id !== userId)
       }
 }
