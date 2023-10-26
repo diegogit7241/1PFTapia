@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Alumno } from '../Models';
+import { StudentService } from '../student.service';
 import { UserDialogComponent } from '../user-dialog/user-dialog.component';
 
 @Component({
@@ -10,18 +11,11 @@ import { UserDialogComponent } from '../user-dialog/user-dialog.component';
 })
 export class UserComponent {
 
-  
+  alumnos: Alumno[] = [];
 
-  alumnos: Alumno[] = [{
-    id:1,
-    name: 'diego',
-    lastName: 'tapia',
-    country: 'chile',
-    email: 'correo@gmail.com',
-    phone: '97185913'
-  }]
-  constructor(private matDialog: MatDialog){
-
+  constructor(private matDialog: MatDialog,
+    private studentsService: StudentService){
+    this.alumnos = this.studentsService.getStudents();
   }
 
 

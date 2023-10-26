@@ -1,5 +1,5 @@
 <mat-drawer-container class="example-container" style="background-color: #4e3f69;">
-
+  
     <mat-toolbar color="primary" >
         <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
           <mat-icon>menu</mat-icon>
@@ -24,11 +24,12 @@
       <H1 style="color: white"><mat-icon> list_alt</mat-icon> Opciones</H1>               
           <br>
           <br>
-          <button mat-flat-button id="primary" type="flat" color="primary" (click)="showFiller = !showFiller" mat-raised-button>
-            <mat-icon>library_books</mat-icon> Crear Cursos
+          <button *ngFor="let option of $options | async" mat-flat-button id="primary" type="flat" color="primary" (click)="showFiller = !showFiller" mat-raised-button>
+            <mat-icon>library_books</mat-icon> {{option}}  
+                      
           </button>
-  
+          <br>
+          <br>
       </mat-drawer>     
   
   </mat-drawer-container>
-  

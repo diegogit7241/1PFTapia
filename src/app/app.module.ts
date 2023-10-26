@@ -10,11 +10,14 @@ import { UserTAbleComponent } from './user-table/user-table.component';
 import { UserDialogComponent } from './user-dialog/user-dialog.component';
 import { UserComponent} from './user-component/user-component';
 import { ThFontsDirective } from './th-fonts.directive';
+import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
     
   ],
   imports: [
@@ -23,7 +26,9 @@ import { ThFontsDirective } from './th-fonts.directive';
     BrowserAnimationsModule,
     DashboardModule
   ],
-  providers: [],
+  providers: [{
+    provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {appearance: 'outline'}
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

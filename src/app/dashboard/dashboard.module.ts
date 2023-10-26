@@ -15,6 +15,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { UserDialogComponent } from '../user-dialog/user-dialog.component';
 import { UserComponent } from '../user-component/user-component';
 import { ThFontsDirective } from '../th-fonts.directive';
+import { HomeComponent } from '../home/home/home.component';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { ThFontsDirective } from '../th-fonts.directive';
     UserTAbleComponent,
     UserDialogComponent,
     UserComponent,
-    ThFontsDirective
+    ThFontsDirective,
+    HomeComponent
   ],
   imports: [
     CommonModule,
@@ -37,9 +40,10 @@ import { ThFontsDirective } from '../th-fonts.directive';
     ReactiveFormsModule,
     FormsModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressSpinnerModule
     
   ],
-  exports: [DashboardComponent,FullNamePipe,UserTAbleComponent,UserDialogComponent,UserComponent,ThFontsDirective],
+  exports: [DashboardComponent,FullNamePipe,UserTAbleComponent,UserDialogComponent,UserComponent,ThFontsDirective,HomeComponent],
 })
 export class DashboardModule { }
